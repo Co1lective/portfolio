@@ -112,7 +112,7 @@ body {
 .chatlist .bot__output {
   align-self: flex-start;
   box-shadow: -1px 1px 2px #666;
-  border-top: 4px solid #27AE60
+  border-top: 4px solid #27AE60;
   will-change: auto;
   height: auto;
   opacity: 0;
