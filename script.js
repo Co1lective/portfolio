@@ -221,9 +221,8 @@ var possibleInput = {
     return
     },
   "best work" : function(){
-    responseText("I will show you my best work!");
-    responseText("These are my <a href='#animation'>best scripts</a>")
-    responseText("These are my <a href='#projects'>best projects</a>")
+    responseText("My best work can be found in the discord server below!");
+    responseText("Link: <a href='https://discord.gg/MBhKMb6M'>https://discord.gg/MBhKMb6M</a>")
     commandReset(1);
     return
     },
