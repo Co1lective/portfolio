@@ -222,7 +222,7 @@ var possibleInput = {
     },
   "best work" : function(){
     responseText("My best work can be found in the discord server below!");
-    responseText("Link: <a href=' https://discord.gg/DPGHAruKfK' target='_top'>Discord Invite</a>")
+    responseText("Link: <a href='https://discord.com/invite/MBhKMb6M' target='_top'>Discord Invite</a>")
     commandReset(1);
     return
     },
