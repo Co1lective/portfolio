@@ -227,7 +227,6 @@ var possibleInput = {
     return
     },
   "about" : function(){
-    responseText("This is me, Co1lective");
     responseText("I'm a 13 year old Programmer with 2+ years of experience and a Full Stack Developer @Roblox");
     responseText("My ambition is to create the greatest and most awe-inspiring games on Roblox.");
     responseText("Would you like to know about my vision? (Yes/No)");
