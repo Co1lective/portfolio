@@ -33,8 +33,7 @@ section {
 /*##### HERO SECTION #####*/
 .hero {
   height: 100%;
-  /* Credit image : Unsplash - Luke Chesser */
-  background: url("https://media.discordapp.net/attachments/1202367193816518766/1227560894200942635/image_1_1.png?ex=6628da2c&is=6616652c&hm=b2b8e492d04a246e45faffcfed55b335097980ba3f52a92a67741f5c406a6e69&=&format=webp&quality=lossless&width=931&height=443");
+  background: url("https://media.discordapp.net/attachments/1202367193816518766/1227560894200942635/image_1_1.png?ex=663b4f2c&is=6639fdac&hm=5e6df8b1a75158e702f7cc619b52f5f7d38f278a2fdf975fad9fcb4be6cfd83b&=&format=webp&quality=lossless&width=605&height=288");
   background-size: cover;
   background-position: center;
 }
