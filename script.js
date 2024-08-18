@@ -1,70 +1,42 @@
-$( document ).ready(function() {
-  // Main variables
-    var $aboutTitle = $('.about-myself .content h2');
-    var $developmentWrapper = $('.development-wrapper');
-    var developmentIsVisible = false;
+let nav = document.querySelector("nav");
+let scrollBtn = document.querySelector(".scroll-button a");
+console.log(scrollBtn);
+let val;
+window.onscroll = function() {
+  if(document.documentElement.scrollTop > 20){
+    nav.classList.add("sticky");
+    scrollBtn.style.display = "block";
+  }else{
+    nav.classList.remove("sticky");
+    scrollBtn.style.display = "none";
+  }
+ 
+}
 
+let body = document.querySelector("body");
+let navBar = document.querySelector(".navbar");
+let menuBtn = document.querySelector(".menu-btn");
+let cancelBtn = document.querySelector(".cancel-btn");
+menuBtn.onclick = function(){
+  navBar.classList.add("active");
+  menuBtn.style.opacity = "0";
+  menuBtn.style.pointerEvents = "none";
+  body.style.overflow = "hidden";
+  scrollBtn.style.pointerEvents = "none";
+}
+cancelBtn.onclick = function(){
+  navBar.classList.remove("active");
+  menuBtn.style.opacity = "1";
+  menuBtn.style.pointerEvents = "auto";
+  body.style.overflow = "auto";
+  scrollBtn.style.pointerEvents = "auto";
+}
 
-  /* ####### HERO SECTION ####### */
-
-  $('.hero .content .header').delay(500).animate({
-    'opacity':'1',
-    'top': '50%'
-  },1000);
-
-
-  $(window).scroll( function(){
-
-    var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-    /* ##### ABOUT MYSELF SECTION #### */
-    if( bottom_of_window > ($aboutTitle.offset().top + $aboutTitle.outerHeight())){
-      $('.about-myself .content h2').addClass('aboutTitleVisible');
-    } 
-  /* ##### EXPERIENCE SECTION #### */
-
-      // Check the location of each element hidden */
-      $('.experience .content .hidden').each( function(i){
-
-          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-
-          /* If the object is completely visible in the window, fadeIn it */
-          if( bottom_of_window > bottom_of_object ){
-
-            $(this).animate({
-              'opacity':'1',
-              'margin-left': '0'
-            },600);
-          }
-      });
-
-  /*###### SKILLS SECTION ######*/
-
-    var middle_of_developmentWrapper = $developmentWrapper.offset().top + $developmentWrapper.outerHeight()/2;
-
-    if((bottom_of_window > middle_of_developmentWrapper)&& (developmentIsVisible == false)){
-
-      $('.skills-bar-container li').each( function(){
-
-        var $barContainer = $(this).find('.bar-container');
-        var dataPercent = parseInt($barContainer.data('percent'));
-        var elem = $(this).find('.progressbar');
-        var percent = $(this).find('.percent');
-        var width = 0;
-
-        var id = setInterval(frame, 15);
-
-        function frame() {
-          if (width >= dataPercent) {
-              clearInterval(id);
-          } else {
-            width++;
-            elem.css("width", width+"%");
-            percent.html(width+" %");
-          }
-        }
-      });
-      developmentIsVisible = true;
-    }
-  }); // -- End window scroll --
-});
+let navLinks = document.querySelectorAll(".menu li a");
+for (var i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click" , function() {
+    navBar.classList.remove("active");
+    menuBtn.style.opacity = "1";
+    menuBtn.style.pointerEvents = "auto";
+  });
+}
