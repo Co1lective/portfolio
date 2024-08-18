@@ -1,542 +1,498 @@
-@import url(https://fonts.googleapis.com/css?family=PT+Sans);
-*,
-*:before,
-*:after {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  color: #444;
-  background: #f9f9f9;
-  font-size: 16px;
-  font-family: "PT Sans", sans-serif;
-}
-
-a {
-  color: inherit;
   text-decoration: none;
+  scroll-behavior: smooth;
+}
+ 
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #6e93f7;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+    background: #4070f4;
 }
 
-section {
-  position: relative;
+nav{
+  position: fixed;
   width: 100%;
+  padding: 20px 0;
+  z-index: 998;
+  transition: all 0.3s ease;
+  font-family: 'Ubuntu', sans-serif;
+}
+nav.sticky{
+  background: #4070f4;
+  padding: 13px 0;
+}
+nav .navbar{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+nav .navbar .logo a{
+  font-weight: 500;
+  font-size: 35px;
+  color: #4070f4;
+}
+nav.sticky .navbar .logo a{
+  color: #fff;
+}
+nav .navbar .menu{
+  display: flex;
+  position: relative;
+}
+nav .navbar .menu li{
+  list-style: none;
+  margin: 0 8px;
+}
+.navbar .menu a{
+  font-size: 18px;
+  font-weight: 500;
+  color: #0E2431;
+  padding: 6px 0;
+  transition: all 0.4s ease;
+}
+.navbar .menu a:hover{
+  color: #4070f4;
+}
+nav.sticky .menu a{
+  color: #FFF;
+}
+nav.sticky .menu a:hover{
+  color: #0E2431;
+}
+.navbar .media-icons a{
+  color: #4070f4;
+  font-size: 18px;
+  margin: 0 6px;
+}
+nav.sticky .media-icons a{
+  color: #FFF;
 }
 
-/*##### HERO SECTION #####*/
-.hero {
-  height: 100%;
-  background: url("https://media.discordapp.net/attachments/1202367193816518766/1227560894200942635/image_1_1.png?ex=663b4f2c&is=6639fdac&hm=5e6df8b1a75158e702f7cc619b52f5f7d38f278a2fdf975fad9fcb4be6cfd83b&=&format=webp&quality=lossless&width=605&height=288");
+nav .menu-btn,
+.navbar .menu .cancel-btn{
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+nav .menu-btn{
+  color: #4070f4;
+}
+nav.sticky .menu-btn{
+  color: #FFF;
+}
+.navbar .menu .menu-btn{
+  color: #fff;
+}
+
+.home{
+  height: 100vh;
+  width: 100%;
+  background: url("images/background.png") no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
 }
-.hero .content {
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
+.home .home-content{
+  width: 90%;
   height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.hero .content .header {
-  position: absolute;
-  top: 55%;
-  width: 100%;
-  -webkit-transform: translate(0%, -50%);
-  transform: translate(0%, -50%);
-  text-align: center;
-  opacity: 0;
+.home .text-one{
+  font-size: 25px;
+  color: #0E2431;
 }
-.hero .content .header h1 {
+.home .text-two{
+  color: #0E2431;
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .text-three{
+  font-size: 40px;
+  margin: 5px 0;
+  color: #4070f4;
+}
+.home .text-four{
+  font-size: 23px;
+  margin: 5px 0;
+  color: #0E2431;
+}
+.home .button{
+  margin: 14px 0;
+}
+.home .button button{
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #4070f4;
   color: #fff;
-  font-size: 2.5em;
-  text-shadow: 0px 2px 3px #2d2d2d;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+.home .button button:hover{
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
 }
 
-/*##### ABOUT MYSELF SECTION #####*/
-.about-myself {
-  padding: 50px 20px;
+section{
+  padding-top: 40px;
 }
-.about-myself .content {
-  text-align: center;
+section .content{
+  width: 80%;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
 }
-.about-myself .content h2 {
-  color: #3d3d3d;
-  font-size: 3em;
-  margin-bottom: 20px;
-  -webkit-transform: translateY(-50px) scale(0);
-  transform: translateY(-50px) scale(0);
-  -webkit-transition: transform 0.7s;
-  -moz-transition: transform 0.7s;
-  transition: transform 0.7s;
+.about .about-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.about-myself .content .aboutTitleVisible {
-  -webkit-transform: translateY(0px) scale(1);
-  transform: translateX(0px) scale(1);
+section .title{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 }
-.about-myself .content p span {
-  color: #c0392b;
-  font-weight: bold;
-}
-
-/*##### EXPERIENCE SECTION #####*/
-.experience {
-  background: #1a1a1a;
-  padding: 50px 0;
-  overflow-x: hidden;
-}
-.experience .content {
-  text-align: center;
-}
-.experience .content h1 {
-  font-size: 2em;
-  color: #fff;
-}
-.experience .content ul {
-  padding: 50px 0;
-  list-style-type: none;
-}
-.experience .content ul li {
-  background: #f9f9f9;
+section .title span{
+  color: #0E2431;
+  font-size: 30px;
+  font-weight: 600;
   position: relative;
-  margin-left: 20px;
-  width: 5px;
-  padding-bottom: 40px;
+  padding-bottom: 8px;
 }
-.experience .content ul li:last-child {
-  padding-bottom: 7px;
-}
-.experience .content ul li:before {
-  content: "";
-  background: #1a1a1a;
+section .title span::before,
+section .title span::after{
+  content: '';
   position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #4070f4;
+  left: 0;
+  bottom: 0;
+}
+section .title span::after{
+  bottom: -7px;
+  width: 70%;
   left: 50%;
-  top: 0;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 20px;
-  height: 20px;
-  border: 4px solid #f9f9f9;
 }
-.experience .content ul li .hidden {
-  opacity: 0;
-  margin-left: 10vw;
+.about .about-details .left{
+  width: 45%;
 }
-.experience .content ul li .experience-content {
-  background: #f9f9f9;
-  position: relative;
-  top: 7px;
-  left: 48px;
-  width: calc(100vw - 100px);
-  padding: 20px;
-  text-align: center;
-  -webkit-border-radius: 0 5px 5px;
-  -moz-border-radius: 0 5px 5px;
-  border-radius: 0 5px 5px;
+.about .left img{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
 }
-.experience .content ul li .experience-content h2 {
-  font-size: 1.5em;
-  color: #3c3c3c;
-  padding-bottom: 10px;
+.about-details .right{
+  width: 55%;
 }
-.experience .content ul li .experience-content .experience-time {
-  color: #777;
-  font-size: 1.1em;
-  padding-bottom: 10px;
-}
-.experience .content ul li .experience-content p {
-  color: #1a1a1a;
-  font-size: 0.95em;
-}
-.experience .content ul li .experience-content:before {
-  content: "";
-  background: #f9f9f9;
-  position: absolute;
-  top: 0;
-  left: -35px;
-  width: 35px;
-  height: 5px;
-}
-
-/*##### SKILLS SECTION #####*/
-.skills {
-  padding: 70px 20px;
-}
-.skills .content .development-wrapper .development-title {
-  color: #3c3c3c;
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 20px;
-}
-.skills .content .development-wrapper .skills-bar-container {
-  position: relative;
-  width: 100%;
-  list-style-type: none;
-}
-.skills .content .development-wrapper .skills-bar-container li {
-  width: 100%;
-  margin-bottom: 20px;
-}
-.skills .content .development-wrapper .skills-bar-container li .progressbar-title {
-  color: #3c3c3c;
-  margin-bottom: 5px;
-}
-.skills .content .development-wrapper .skills-bar-container li .progressbar-title h3 {
-  display: inline-block;
-}
-.skills .content .development-wrapper .skills-bar-container li .progressbar-title .percent {
-  position: absolute;
-  right: 20px;
-  font-size: 1.1em;
-}
-.skills .content .development-wrapper .skills-bar-container li .bar-container {
-  background: #ececec;
-  position: relative;
-  width: 100%;
-  height: 10px;
-}
-.skills .content .development-wrapper .skills-bar-container li .bar-container .progressbar {
-  background: #34495e;
-  position: absolute;
-  width: 0%;
-  height: 100%;
-}
-.skills .content .tools-knowledge-wrapper {
-  width: 100%;
-}
-.skills .content .tools-knowledge-wrapper .tools-wrapper,
-.skills .content .tools-knowledge-wrapper .knowledge-wrapper {
-  position: relative;
-  padding: 20px 0;
-  width: 100%;
-  text-align: center;
-}
-.skills .content .tools-knowledge-wrapper .tools-wrapper .title,
-.skills .content .tools-knowledge-wrapper .knowledge-wrapper .title {
-  color: #3c3c3c;
-  font-size: 2em;
+section  .topic{
+  color: #0E2431;
+  font-size: 25px;
+  font-weight: 500;
   margin-bottom: 10px;
 }
-.skills .content .tools-knowledge-wrapper .tools-wrapper ul,
-.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul {
-  list-style-type: none;
-  margin-left: 40px;
+.about-details .right p{
+  text-align: justify;
+  color: #0E2431;
 }
-.skills .content .tools-knowledge-wrapper .tools-wrapper ul li,
-.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul li {
-  color: #444;
-  font-weight: bold;
-  font-size: 1.1em;
-  text-align: left;
+section .button{
+  margin: 16px 0;
 }
-.skills .content .tools-knowledge-wrapper .tools-wrapper ul li i,
-.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul li i {
-  color: #27ae60;
+section .button button{
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #4070f4;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+section .button button:hover{
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
 }
 
-/*##### RESUME SECTION #####*/
-.resume {
-  background: #1a1a1a;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+ .skills{
+   background: #F0F8FF;
+ }
+ .skills .content{
+   padding: 40px 0;
+ }
+ .skills .skills-details{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .skills-details .text{
+   width: 50%;
+ }
+ .skills-details p{
+   color: #0E2431;
+   text-align: justify;
+ }
+.skills .skills-details .experience{
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
 }
-.resume .content {
-  background: rgba(0, 0, 0, 0.3);
-  padding: 50px 0;
+.skills-details .experience .num{
+  color: #0E2431;
+  font-size: 80px;
+}
+.skills-details .experience .exp{
+  color: #0E2431;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 6px;
+}
+.skills-details .boxes{
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills-details .box{
+  width: calc(100% / 2 - 20px);
+  margin: 20px 0;
+}
+.skills-details .boxes .topic{
+  font-size: 20px;
+  color: #4070f4;
+}
+.skills-details .boxes .per{
+  font-size: 60px;
+  color: #4070f4;
+}
+
+.services .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services .boxes .box{
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
   text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
 }
-.resume .content a {
+.services .boxes .box:hover{
+  background: #4070f4;
   color: #fff;
-  text-transform: uppercase;
 }
-.resume .content a .btn-resume {
-  display: inline-block;
-  font-size: 1.1em;
-  padding: 20px;
-  margin: 0 15px;
-  background: rgba(255, 255, 255, 0.2);
-  position: relative;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.resume .content a .btn-resume span {
-  -webkit-transition: opacity 1.2s;
-  -moz-transition: opacity 1.2s;
-  transition: opacity 1.2s;
-}
-.resume .content a .btn-resume i {
-  color: #fff;
-  position: absolute;
-  padding: 20px 0;
-  top: -80px;
-  width: 100%;
-  left: 0;
-  -webkit-transition: top 0.5s;
-  -moz-transition: top 0.5s;
-  transition: top 0.5s;
-}
-.resume .content a .btn-resume:hover span {
-  opacity: 0;
-  -webkit-transition: opacity 0.4s;
-  -moz-transition: opacity 0.4s;
-  transition: opacity 0.4s;
-}
-.resume .content a .btn-resume:hover i {
-  top: 0;
-}
-
-/*##### PORTFOLIO SECTION #####*/
-.portfolio {
-  background: #f9f9f9;
-  padding: 80px 0;
-}
-.portfolio .content {
+.services .boxes .box .icon{
+  height: 50px;
+  width: 50px;
+  background: #ffffff;
+  border-radius: 50%;
   text-align: center;
-}
-.portfolio .content h1 {
-  color: #3c3c3c;
-  font-size: 2em;
-  margin-bottom: 50px;
-}
-.portfolio .content .projects {
-  width: 100%;
-}
-.portfolio .content .projects .project {
+  line-height: 50px;
+  font-size: 18px;
   color: #fff;
-  position: relative;
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 10%;
-  overflow: hidden;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
 }
-.portfolio .content .projects .project:last-child {
-  margin-bottom: 0;
+.boxes .box:hover{
+  color: #4070f4;
 }
-.portfolio .content .projects .project .project-image img {
-  width: 100%;
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+  color: #0E2431;
+  transition: all 0.4s ease;
 }
-.portfolio .content .projects .project .project-title {
-  color: #3c3c3c;
-  padding: 10px 0;
-}
-.portfolio .content .projects .project .project-description {
-  color: #444;
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+  color: #fff;
 }
 
-/*##### CONTACT SECTION #####*/
-.contact {
+.contact{
+  background: #F0F8FF;
+}
+.contact .content{
+  margin: 0 auto;
   padding: 30px 0;
 }
-.contact .socials {
-  list-style-type: none;
-  width: 100%;
-}
-.contact .socials .social {
-  width: 50%;
-  float: left;
+.contact .text{
+  width: 80%;
   text-align: center;
-}
-.contact .socials .social a {
-  color: #3d3d3d;
-  font-size: 1.5em;
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  transition: color 0.3s;
-}
-.contact .socials .social .email:hover {
-  color: #c8a028;
-}
-.contact .socials .social .twitter:hover {
-  color: #57AEE7;
-}
-.contact .clear {
-  clear: both;
+  margin: auto;
 }
 
-.footer {
-  padding: 25px 0;
+footer{
+  background: #4070f4;
+  padding: 15px 0;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
-.footer p {
-  color: #777;
-  font-size: 1.1em;
+footer .text span{
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
 }
-.footer i {
-  color: #e74c3c;
+footer .text span a{
+  font-weight: 500;
+  color: #FFF;
+}
+footer .text span a:hover{
+  text-decoration: underline;
 }
 
-/* ############################
-        RESPONSIVE
-############################### */
-@media screen and (min-width: 480px) {
-  .skills .content .tools-knowledge-wrapper .tools-wrapper,
-.skills .content .tools-knowledge-wrapper .knowledge-wrapper {
-    width: 50%;
-    float: left;
-    padding: 0;
-  }
-  .skills .content .tools-knowledge-wrapper .tools-wrapper ul,
-.skills .content .tools-knowledge-wrapper .knowledge-wrapper ul {
-    margin-left: 0;
-  }
-  .skills .content .clear {
-    clear: both;
+.scroll-button a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #4070f4;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+@media (max-width: 1190px) {
+  section .content{
+    width: 85%;
   }
 }
-@media screen and (min-width: 640px) {
-  .about-myself {
-    padding: 100px 40px;
+@media (max-width: 1000px) {
+  .about .about-details{
+    justify-content: center;
+    flex-direction: column;
   }
-
-  .skills {
-    padding-left: 0;
-    padding-right: 0;
+  .about .about-details .left{
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
-  .skills .content .development-wrapper {
-    width: 600px;
-    margin: auto;
+  .about-details .right{
+    width: 90%;
+    margin: 40px 0;
+  }
+  .services .boxes .box{
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+}
+@media (max-width: 900px) {
+  .about .left img{
+    height: 350px;
+    width: 350px;
+  }
+}
+ 
+@media (max-width: 750px) {
+  nav .navbar{
+    width: 90%;
+  }
+  nav .navbar .menu{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #0E2431;
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  .navbar.active .menu{
+    left: 0;
+  }
+  nav .navbar .menu a{
+    font-size: 23px;
+    display: block;
+    color: #fff;
+    margin: 10px 0;
+  }
+  nav.sticky .menu a:hover{
+    color: #4070f4;
+  }
+  nav .navbar .media-icons{
+    display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn{
+    display: block;
+  }
+  .home .text-two{
+    font-size: 65px;
+  }
+  .home .text-three{
+    font-size: 35px;
+  }
+  .skills .skills-details{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .skills-details .text{
+    width: 100%;
     margin-bottom: 50px;
   }
-  .skills .content .tools-knowledge-wrapper {
-    width: 600px;
-    margin: auto;
+  .skills-details .boxes{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
-
-  .contact .content .socials {
-    width: 600px;
-    margin: auto;
+  .services .boxes .box{
+    margin: 20px 0;
+    width: 100%;
   }
+  .contact .text{
+    width: 100%;
 }
-@media screen and (min-width: 960px) {
-  .experience .content ul li {
-    margin: 0 auto;
+}
+ 
+@media (max-width: 500px){
+  .home .text-two{
+    font-size: 55px;
   }
-  .experience .content ul li .experience-content {
-    width: 40vw;
+  .home .text-three{
+    font-size: 33px;
   }
-  .experience .content ul li:nth-child(odd) .experience-content {
-    left: 63px;
-  }
-  .experience .content ul li:nth-child(odd) .experience-content:before {
-    left: -50px;
-    width: 50px;
-  }
-  .experience .content ul li:nth-child(even) .experience-content {
-    left: calc(-40vw - 57px);
-    -webkit-border-radius: 5px 0px 5px 5px;
-    -moz-border-radius: 5px 0px 5px 5px;
-    border-radius: 5px 0px 5px 5px;
-  }
-  .experience .content ul li:nth-child(even) .experience-content:before {
-    left: auto;
-    right: -50px;
-    width: 50px;
-  }
-  .experience .content ul li:nth-child(odd) .hidden {
-    margin-left: 10vw;
-  }
-  .experience .content ul li:nth-child(even) .hidden {
-    margin-left: -10vw;
-  }
-
-  .skills {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  .skills .content {
-    max-width: 1100px;
-    margin: auto;
-  }
-  .skills .content .development-wrapper,
-.skills .content .tools-knowledge-wrapper {
-    float: left;
-  }
-  .skills .content .development-wrapper {
-    margin-bottom: 0;
-    width: 60%;
-  }
-  .skills .content .tools-knowledge-wrapper {
-    width: 40%;
-    margin-top: 60px;
-  }
-  .skills .content .tools-knowledge-wrapper .tools-wrapper,
-.skills .content .tools-knowledge-wrapper .knowledge-wrapper {
-    float: none;
-    margin: auto;
-  }
-  .skills .content .tools-knowledge-wrapper .tools-wrapper {
-    margin-bottom: 30px;
-  }
-
-  .portfolio .content .projects .project {
-    position: relative;
-    margin: auto;
-    margin-bottom: 3%;
-    width: 680px;
-    height: 450px;
-    overflow: hidden;
-  }
-  .portfolio .content .projects .project:hover .project-image {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-  .portfolio .content .projects .project:hover .project-title, .portfolio .content .projects .project:hover .project-description {
-    opacity: 1;
-  }
-  .portfolio .content .projects .project .project-image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-transition: transform 0.5s ease;
-    transition: transform 0.5s ease;
-    -webkit-transform-origin: left top;
-    transform-origin: left top;
-    z-index: 3;
-    overflow: hidden;
-  }
-  .portfolio .content .projects .project .project-image img {
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    min-width: 100%;
-  }
-  .portfolio .content .projects .project .project-title,
-.portfolio .content .projects .project .project-description {
-    position: absolute;
-    height: 50%;
-    opacity: 0;
-    -webkit-transition: opacity 0.3s linear;
-    transition: opacity 0.3s linear;
-    overflow: hidden;
-  }
-  .portfolio .content .projects .project .project-title {
-    width: 50%;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    text-align: center;
-    display: table;
-  }
-  .portfolio .content .projects .project .project-title h2 {
-    font-size: 2em;
-    text-decoration: underline;
-    display: table-cell;
-    vertical-align: middle;
-  }
-  .portfolio .content .projects .project .project-description {
-    width: 100%;
-    top: 50%;
-    left: 0;
-    padding: 25px 10px;
-    text-align: left;
+  .skills-details .boxes .per{
+    font-size: 50px;
+    color: #4070f4;
   }
 }
