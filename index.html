@@ -1,255 +1,179 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio | Co1lective</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
 
-
-  <meta charset="UTF-8">
-  <title>Co1lective | Portfolio</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"><link rel="stylesheet" href="./style.css">
-
-</head>
-</script>
-
-<body>
-<section class="hero">
-  <div class="content">
-    <div class="header">
-      <h1>Co1lective</h1>
+    <div class="scroll-button">
+      <a href="#home"><i class="fas fa-arrow-up"></i></a>
     </div>
-  </div>
-</section>
-<section class="about-myself">
-  <div class="content">
-    <h2>Heya!</h2>
-    <p>I'm <span>Co1lective</span>, a scripter on <span>Roblox</span> with just over <span>two years</span> of experience.</p>
-  </div>
-</section>
-<section class="experience">
-  <div class="content">
-    <h1>Experiences</h1>
-    <ul>
-      <li>
-        <div class="experience-content hidden">
-          <h2>Bivaro</h2>
-          <div class="experience-time">Mar - Dec 2022</div>
-          <p>Managed over 2.7k+ members on a daily basis.</p>
-        </div>
-      </li>
-      <li>
-        <div class="experience-content hidden">
-          <h2>Palm Beach Entertainment</h2>
-          <div class="experience-time">Jan - Feb 2023</div>
-          <p>Scripted many systems; such as: Currency system, Vehicle system, and much more.</p>
-        </div>
-      </li>
-      <li>
-        <div class="experience-content hidden">
-          <h2>AquaZone</h2>
-          <div class="experience-time">Mar - Oct 2023</div>
-          <p>At AquaZone, I was required to produce quality updates weekly, which greatly gained popularity upon the game.</p>
-        </div>
-      </li>
-      <li>
-        <div class="experience-content hidden">
-          <h2>Venus Tech</h2>
-          <div class="experience-time">Oct - Feb 2023</div>
-          <p>Venus Tech is a tech group on Roblox. Me, as a Co-Owner; I had to manage and overlook the server, aswell as develop weekly products.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-<section class="skills">
-  <div class="content">
-    <div class="development-wrapper">
-      <h2 class="development-title">Skills</h2>
-      <ul class="skills-bar-container">
-        <li>
-          <div class="progressbar-title">
-            <h3>LUAU</h3>
-            <span class="percent" id="html-pourcent"></span>
+
+    <nav>
+      <div class="navbar">
+        <div class="logo"><a href="#">Portfolio.</a></div>
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
           </div>
-          <div class="bar-container" data-percent="74">
-            <span class="progressbar" id="progress-html"></span>
-          </div>
-        </li>
-        <li>
-          <div class="progressbar-title">
-            <h3>Project Management</h3>
-            <span class="percent" id="css-pourcent"></span>
-          </div>
-          <div class="bar-container" data-percent="93">
-            <span class="progressbar" id="progress-css"></span>
-          </div>
-        </li>
-        <li>
-          <div class="progressbar-title">
-            <h3>Website Development</h3>
-            <span class="percent" id="javascript-pourcent"></span>
-          </div>
-          <div class="bar-container" data-percent="18">
-            <span class="progressbar" id="progress-javascript"></span>
-          </div>
-        </li>
-        <li>
-          <div class="progressbar-title">
-            <h3>Teaching</h3>
-            <span class="percent" id="php-pourcent"></span>
-          </div>
-          <div class="bar-container" data-percent="67">
-            <span class="progressbar" id="progress-php"></span>
-          </div>
-        </li>
-        <li>
-          <div class="progressbar-title">
-            <h3>Public Speaking</h3>
-            <span class="percent" id="angular-pourcent"></span>
-          </div>
-          <div class="bar-container" data-percent="32">
-            <span class="progressbar" id="progress-angular"></span>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="tools-knowledge-wrapper">
-      <div class="tools-wrapper">
-        <h2 class="title">Tools</h2>
-        <ul class="tools">
-          <li>
-            <i class="fa fa-check" aria-hidden="true"></i>
-            Roblox Studio
-          </li>
-          <li>
-            <i class="fa fa-check" aria-hidden="true"></i>
-            GitHub
-          </li>
-          <li>
-            <i class="fa fa-check" aria-hidden="true"></i>
-            Discord
-          </li>
-          <li>
-            <i class="fa fa-check" aria-hidden="true"></i>
-            Visual Studio Code
-          </li>
         </ul>
-      </div>
-      <div class="knowledge-wrapper">
-        <h2 class="title">Knowledge</h2>
-        <ul class="knowledge">
-          <li>
-            <i class="fa fa-check" aria-hidden="true"></i>
-            Object Orientated Prog..
-          </li>
-          <li>
-            <i class="fa fa-check" aria-hidden="true"></i>
-            Advanced Systems
-          </li>
-          <li>
-            <i class="fa fa-check" aria-hidden="true"></i>
-            ...
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="clear"></div>
-  </div>
-  <div class="clear"></div>
-</section>
-<section class="portfolio">
-  <div class="content">
-    
-    <h1>Some Works</h1>
-    
-    <div class="projects">
-      
-      <div class="project">
-        <div class="project-image">
-          <img src="https://github.com/Co1lective/portfolio/EmbedWebhookSystem.gif" alt="Discod Webhook"/>
-        </div>
-        <div class="project-title">
-          <h2>Project #1</h2>
-        </div>
-        <div class="project-description">
-          <p>In this project, I created a Discord -> Roblox webhook system which displays my knowledge of API's.</p>
+        <div class="media-icons">
+          <a href="mailto:rblx.co1lective@gmail.com?subject=Business Enquiry"><i class="fab fa-google"></i></a>
+          <a href="https://x.com/Co1lectiveDev"><i class="fab fa-twitter"></i></a>
+          <a href="https://discord.com/users/1143173164512317492"><i class="fab fa-discord"></i></a>
         </div>
       </div>
-      <div class="project">
-        <div class="project-image">
-          <img src="https://github.com/Co1lective/portfolio/ElevatorSystem.gif" alt="Elevator System"/>
-        </div>
-        <div class="project-title">
-          <h2>Project #2</h2>
-        </div>
-        <div class="project-description">
-          <p>A basic elevator system, that portrays my knowledge of tweens & charachter manipulation.</p>
-        </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
       </div>
-      <div class="project">
-        <div class="project-image">
-          <img src="https://github.com/Co1lective/portfolio/JobSystem.gif" alt="Job System"/>
-        </div>
-        <div class="project-title">
-          <h2>Project #3</h2>
-        </div>
-        <div class="project-description">
-          <p>A job system for a commission.</p>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-image">
-          <img src="https://github.com/Co1lective/portfolio/CameraSystem.gif" alt="Camera System"/>
-        </div>
-        <div class="project-title">
-          <h2>Project #4</h2>
-        </div>
-        <div class="project-description">
-          <p>Camera System for a FNAF type game.</p>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-image">
-          <img src="https://github.com/Co1lective/portfolio/AIPathfinding.gif" alt="AI System"/>
-        </div>
-        <div class="project-title">
-          <h2>Project #5</h2>
-        </div>
-        <div class="project-description">
-          <p>AI system, potraying my skill of pathfinding and raytracing.</p>
-        </div>
-      </div>
-      <div class="project">
-        <div class="project-image">
-          <img src="https://github.com/Co1lective/portfolio/DrawingSystem.gif" alt="Drawing System"/>
-        </div>
-        <div class="project-title">
-          <h2>Project #6</h2>
-        </div>
-        <div class="project-description">
-          <p>This drawing system shows that I can use math.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="contact">
-  <div class="content">
-    <ul class="socials">
-      <li class="social">
-        <a href="mailto:rblx.co1lective@gmail.com" target="_blank" class="email">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li class="social">
-        <a href="https://twitter.com/Co1lectiveDev" target="_blank" class="twitter">
-          <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-      </li>
-    </ul>
-    <div class="clear"></div>
-  </div>
-</section>
+    </nav>
 
-  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script><script  src="./script.js"></script>
+    <section class="home" id="home">
+      <div class="home-content">
+        <div class="text">
+          <div class="text-one">Heya,</div>
+          <div class="text-two">I'm Co1lective</div>
+          <div class="text-three">A Programmer</div>
+          <div class="text-four">From Ireland</div>
+        </div>
+        <a href="https://discord.com/users/1143173164512317492">
+          <div class="button">
+            <button>Hire Me</button>
+          </div>
+        </a>
+        
+      </div>
+    </section>
 
-</body>
+    <section class="about" id="about">
+      <div class="content">
+        <div class="title"><span>About Me</span></div>
+        <div class="about-details">
+          <div class="left">
+            <img src="about.png" alt="" />
+          </div>
+          <div class="right">
+            <div class="topic">Programming Is My Passion</div>
+            <p>
+              Hello! I am a passionate Roblox developer and swimmer from the Republic of Ireland. 
+              I have been playing games on Roblox since 2015, and since early 2021, I have been creating experiences on the 
+              platform and have met some truly amazing people. While some people may swerve away from 
+              young developers, that challange makes my journey that much more enjoyable. My 
+              goal is to eventually inspire other young developers to go 101%, give their all, and 
+              consistently go above and beyond for their clients!
+            </p>
+            <div class="button">
+              <button>Roblox Account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="content">
+        <div class="title"><span>My Skills</span></div>
+        <div class="skills-details">
+          <div class="text">
+            <div class="topic">I specialise in Programming, but..</div>
+            <p>I can also Design Ui, Manage Development groups, create eye-catching graphics, basic video edits, compose sounds and sound effects, 
+              advertise groups, analyse analytics, and many many more.
+            </p>
+            <div class="experience">
+              <div class="num">4</div>
+              <div class="exp">
+                Years Of <br />
+                Experience
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="content">
+        <div class="title"><span>My Testimonials</span></div>
+        <div class="boxes">
+          <div class="box">
+            <div class="icon">
+              <img src="bulb-pfp.png" width="100%" height="100%">
+            </div>
+            <div class="topic">BulbDev</div>
+            <p>Co1lective really came through with a complex Roblox system, scripting everything quickly and efficiently. Their fast turnaround and attention to detail made the whole process a breeze.</p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <img src="lifeless-pfp.png" width="100%" height="100%">
+            </div>
+            <div class="topic">L7FELESS</div>
+            <p>very fast & efficient, 💯</p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <img src="viss-pfp.png" width="100%" height="100%">
+            </div>
+            <div class="topic">Vissenvreter</div>
+            <p>Co1lective is a nice, talented, nice scripter. Always polite and does what you ask for. Delivers work with quality!</p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <img src="shush-pfp.png" width="100%" height="100%">
+            </div>
+            <div class="topic">Shush</div>
+            <p>He did everything that I asked him to do and a couple of other stuff </p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <img src="kadboa-pfp.png" width="100%" height="100%">
+            </div>
+            <div class="topic">Kadboa</div>
+            <p>Working with Co1lective was always a pleasure. He is fast, efficient and 
+              always works to the max, contributing with maximum effort. Not only is he 
+              a great communicator, his work is also 10/10. I often ask Co1lective for 
+              advice or if I need something and he is always there to help. 
+              Would definitely recommend.</p>
+          </div>
+          <div class="box">
+            
+            <div class="topic"> </div>
+            <p>Loading 19 more..</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="content">
+        <div class="title"><span>Contact Me</span></div>
+        <div class="text">
+          <div class="topic">Have Any Business Enquiries or Concerns?</div>
+          <p>DM me on Discord! (co1lective)</p>
+          <a href="https://discord.com/users/1143173164512317492">
+            <div class="button">
+              <button>Let's Chat</button>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="text">
+        <span>Co1lective | &#169; 2024 All Rights Reserved</span>
+      </div>
+    </footer>
+ 
+    <script src="script.js"></script>
+  </body>
 </html>
